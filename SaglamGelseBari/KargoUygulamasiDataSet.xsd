@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KargoUygulamasiDataSet" targetNamespace="http://tempuri.org/KargoUygulamasiDataSet.xsd" xmlns:mstns="http://tempuri.org/KargoUygulamasiDataSet.xsd" xmlns="http://tempuri.org/KargoUygulamasiDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="KargoUygulamasiConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KargoUygulamasiConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SaglamGelseBari.Properties.Settings.GlobalReference.Default.KargoUygulamasiConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AliciTableAdapter" GeneratorDataComponentClassName="AliciTableAdapter" Name="Alici" UserDataComponentName="AliciTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KargoUygulamasiConnectionString (Settings)" DbObjectName="KargoUygulamasi.dbo.Alici" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AliciID, Ad, Soyad, Sehir, Ilce, Mahalle, Adres, Mail, Telefon, Tc FROM dbo.Alici</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BGondericiTableAdapter" GeneratorDataComponentClassName="BGondericiTableAdapter" Name="BGonderici" UserDataComponentName="BGondericiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KargoUygulamasiConnectionString (Settings)" DbObjectName="KargoUygulamasi.dbo.BGonderici" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT BireyselID, Ad, Soyad, Tc FROM dbo.BGonderici</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GondericilerTableAdapter" GeneratorDataComponentClassName="GondericilerTableAdapter" Name="Gondericiler" UserDataComponentName="GondericilerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KargoUygulamasiConnectionString (Settings)" DbObjectName="KargoUygulamasi.dbo.Gondericiler" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT GondericiID, IndirimOrani, Sehir, Ilce, Mahalle, Adres, Telefon, Mail, AnlasmaKodu FROM dbo.Gondericiler</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KargoTableAdapter" GeneratorDataComponentClassName="KargoTableAdapter" Name="Kargo" UserDataComponentName="KargoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KargoUygulamasiConnectionString (Settings)" DbObjectName="KargoUygulamasi.dbo.Kargo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TakipNo, GonderiNo, Fiyat, GondericiID, AliciId, OdemeTuru, PersonelID, SigortaDurumu, Sinifi, Icerik, GonderimSekli FROM dbo.Kargo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KGondericiTableAdapter" GeneratorDataComponentClassName="KGondericiTableAdapter" Name="KGonderici" UserDataComponentName="KGondericiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KargoUygulamasiConnectionString (Settings)" DbObjectName="KargoUygulamasi.dbo.KGonderici" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT KurumsalID, KurumAd, MersisNo FROM dbo.KGonderici</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mahalleTableAdapter" GeneratorDataComponentClassName="mahalleTableAdapter" Name="mahalle" UserDataComponentName="mahalleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KargoUygulamasiConnectionString (Settings)" DbObjectName="KargoUygulamasi.dbo.mahalle" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT mahalle_id, mahalle_title, mahalle_key, mahalle_ilcekey FROM dbo.mahalle</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PersonelTableAdapter" GeneratorDataComponentClassName="PersonelTableAdapter" Name="Personel" UserDataComponentName="PersonelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KargoUygulamasiConnectionString (Settings)" DbObjectName="KargoUygulamasi.dbo.Personel" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Ad, Soyad, Tc, Mail, Sehir, Ilce, Mahalle, Adres, Telefon, Unvan, SubeID, Sifre FROM dbo.Personel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sehirTableAdapter" GeneratorDataComponentClassName="sehirTableAdapter" Name="sehir" UserDataComponentName="sehirTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KargoUygulamasiConnectionString (Settings)" DbObjectName="KargoUygulamasi.dbo.sehir" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT sehir_id, sehir_title, sehir_key FROM dbo.sehir</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SubeTableAdapter" GeneratorDataComponentClassName="SubeTableAdapter" Name="Sube" UserDataComponentName="SubeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KargoUygulamasiConnectionString (Settings)" DbObjectName="KargoUygulamasi.dbo.Sube" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SubeID, Ad, Sehir, Ilce, Mahalle, Adres, Mail, Telefon FROM dbo.Sube</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="KargoUygulamasiDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="KargoUygulamasiDataSet" msprop:Generator_DataSetName="KargoUygulamasiDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Alici" msprop:Generator_RowEvHandlerName="AliciRowChangeEventHandler" msprop:Generator_RowDeletedName="AliciRowDeleted" msprop:Generator_RowDeletingName="AliciRowDeleting" msprop:Generator_RowEvArgName="AliciRowChangeEvent" msprop:Generator_TablePropName="Alici" msprop:Generator_RowChangedName="AliciRowChanged" msprop:Generator_RowChangingName="AliciRowChanging" msprop:Generator_TableClassName="AliciDataTable" msprop:Generator_RowClassName="AliciRow" msprop:Generator_TableVarName="tableAlici" msprop:Generator_UserTableName="Alici">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BGonderici" msprop:Generator_RowEvHandlerName="BGondericiRowChangeEventHandler" msprop:Generator_RowDeletedName="BGondericiRowDeleted" msprop:Generator_RowDeletingName="BGondericiRowDeleting" msprop:Generator_RowEvArgName="BGondericiRowChangeEvent" msprop:Generator_TablePropName="BGonderici" msprop:Generator_RowChangedName="BGondericiRowChanged" msprop:Generator_RowChangingName="BGondericiRowChanging" msprop:Generator_TableClassName="BGondericiDataTable" msprop:Generator_RowClassName="BGondericiRow" msprop:Generator_TableVarName="tableBGonderici" msprop:Generator_UserTableName="BGonderici">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Gondericiler" msprop:Generator_RowEvHandlerName="GondericilerRowChangeEventHandler" msprop:Generator_RowDeletedName="GondericilerRowDeleted" msprop:Generator_RowDeletingName="GondericilerRowDeleting" msprop:Generator_RowEvArgName="GondericilerRowChangeEvent" msprop:Generator_TablePropName="Gondericiler" msprop:Generator_RowChangedName="GondericilerRowChanged" msprop:Generator_RowChangingName="GondericilerRowChanging" msprop:Generator_TableClassName="GondericilerDataTable" msprop:Generator_RowClassName="GondericilerRow" msprop:Generator_TableVarName="tableGondericiler" msprop:Generator_UserTableName="Gondericiler">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Kargo" msprop:Generator_RowEvHandlerName="KargoRowChangeEventHandler" msprop:Generator_RowDeletedName="KargoRowDeleted" msprop:Generator_RowDeletingName="KargoRowDeleting" msprop:Generator_RowEvArgName="KargoRowChangeEvent" msprop:Generator_TablePropName="Kargo" msprop:Generator_RowChangedName="KargoRowChanged" msprop:Generator_RowChangingName="KargoRowChanging" msprop:Generator_TableClassName="KargoDataTable" msprop:Generator_RowClassName="KargoRow" msprop:Generator_TableVarName="tableKargo" msprop:Generator_UserTableName="Kargo">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="KGonderici" msprop:Generator_RowEvHandlerName="KGondericiRowChangeEventHandler" msprop:Generator_RowDeletedName="KGondericiRowDeleted" msprop:Generator_RowDeletingName="KGondericiRowDeleting" msprop:Generator_RowEvArgName="KGondericiRowChangeEvent" msprop:Generator_TablePropName="KGonderici" msprop:Generator_RowChangedName="KGondericiRowChanged" msprop:Generator_RowChangingName="KGondericiRowChanging" msprop:Generator_TableClassName="KGondericiDataTable" msprop:Generator_RowClassName="KGondericiRow" msprop:Generator_TableVarName="tableKGonderici" msprop:Generator_UserTableName="KGonderici">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mahalle" msprop:Generator_RowEvHandlerName="mahalleRowChangeEventHandler" msprop:Generator_RowDeletedName="mahalleRowDeleted" msprop:Generator_RowDeletingName="mahalleRowDeleting" msprop:Generator_RowEvArgName="mahalleRowChangeEvent" msprop:Generator_TablePropName="mahalle" msprop:Generator_RowChangedName="mahalleRowChanged" msprop:Generator_RowChangingName="mahalleRowChanging" msprop:Generator_TableClassName="mahalleDataTable" msprop:Generator_RowClassName="mahalleRow" msprop:Generator_TableVarName="tablemahalle" msprop:Generator_UserTableName="mahalle">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Personel" msprop:Generator_RowEvHandlerName="PersonelRowChangeEventHandler" msprop:Generator_RowDeletedName="PersonelRowDeleted" msprop:Generator_RowDeletingName="PersonelRowDeleting" msprop:Generator_RowEvArgName="PersonelRowChangeEvent" msprop:Generator_TablePropName="Personel" msprop:Generator_RowChangedName="PersonelRowChanged" msprop:Generator_RowChangingName="PersonelRowChanging" msprop:Generator_TableClassName="PersonelDataTable" msprop:Generator_RowClassName="PersonelRow" msprop:Generator_TableVarName="tablePersonel" msprop:Generator_UserTableName="Personel">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sehir" msprop:Generator_RowEvHandlerName="sehirRowChangeEventHandler" msprop:Generator_RowDeletedName="sehirRowDeleted" msprop:Generator_RowDeletingName="sehirRowDeleting" msprop:Generator_RowEvArgName="sehirRowChangeEvent" msprop:Generator_TablePropName="sehir" msprop:Generator_RowChangedName="sehirRowChanged" msprop:Generator_RowChangingName="sehirRowChanging" msprop:Generator_TableClassName="sehirDataTable" msprop:Generator_RowClassName="sehirRow" msprop:Generator_TableVarName="tablesehir" msprop:Generator_UserTableName="sehir">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sube" msprop:Generator_RowEvHandlerName="SubeRowChangeEventHandler" msprop:Generator_RowDeletedName="SubeRowDeleted" msprop:Generator_RowDeletingName="SubeRowDeleting" msprop:Generator_RowEvArgName="SubeRowChangeEvent" msprop:Generator_TablePropName="Sube" msprop:Generator_RowChangedName="SubeRowChanged" msprop:Generator_RowChangingName="SubeRowChanging" msprop:Generator_TableClassName="SubeDataTable" msprop:Generator_RowClassName="SubeRow" msprop:Generator_TableVarName="tableSube" msprop:Generator_UserTableName="Sube">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

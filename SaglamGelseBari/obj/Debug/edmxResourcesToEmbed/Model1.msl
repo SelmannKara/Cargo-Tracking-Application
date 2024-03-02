@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KargoUygulamasiModelStoreContainer" CdmEntityContainer="KargoUygulamasiEntities">
+    <EntitySetMapping Name="Kargo">
+      <EntityTypeMapping TypeName="KargoUygulamasiModel.Kargo">
+        <MappingFragment StoreEntitySet="Kargo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TakipNo" ColumnName="TakipNo" />
+          <ScalarProperty Name="GonderiNo" ColumnName="GonderiNo" />
+          <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+          <ScalarProperty Name="GondericiID" ColumnName="GondericiID" />
+          <ScalarProperty Name="AliciId" ColumnName="AliciId" />
+          <ScalarProperty Name="OdemeTuru" ColumnName="OdemeTuru" />
+          <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+          <ScalarProperty Name="SigortaDurumu" ColumnName="SigortaDurumu" />
+          <ScalarProperty Name="Sinifi" ColumnName="Sinifi" />
+          <ScalarProperty Name="Icerik" ColumnName="Icerik" />
+          <ScalarProperty Name="GonderimSekli" ColumnName="GonderimSekli" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mahalle">
+      <EntityTypeMapping TypeName="KargoUygulamasiModel.mahalle">
+        <MappingFragment StoreEntitySet="mahalle">
+          <ScalarProperty Name="mahalle_id" ColumnName="mahalle_id" />
+          <ScalarProperty Name="mahalle_title" ColumnName="mahalle_title" />
+          <ScalarProperty Name="mahalle_key" ColumnName="mahalle_key" />
+          <ScalarProperty Name="mahalle_ilcekey" ColumnName="mahalle_ilcekey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sehir">
+      <EntityTypeMapping TypeName="KargoUygulamasiModel.sehir">
+        <MappingFragment StoreEntitySet="sehir">
+          <ScalarProperty Name="sehir_id" ColumnName="sehir_id" />
+          <ScalarProperty Name="sehir_title" ColumnName="sehir_title" />
+          <ScalarProperty Name="sehir_key" ColumnName="sehir_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="RasgeleSayiOlustur" FunctionName="KargoUygulamasiModel.Store.RasgeleSayiOlustur" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KargoUygulamasiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'KargoUygulamasi.dbo.Alici' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Alici">
+          <Property Name="AliciID" Type="int" />
+          <Property Name="Ad" Type="varchar" MaxLength="1" />
+          <Property Name="Soyad" Type="varchar" MaxLength="1" />
+          <Property Name="Sehir" Type="varchar" MaxLength="1" />
+          <Property Name="Ilce" Type="varchar" MaxLength="1" />
+          <Property Name="Mahalle" Type="varchar" MaxLength="1" />
+          <Property Name="Adres" Type="varchar" MaxLength="1" />
+          <Property Name="Mail" Type="varchar" MaxLength="1" />
+          <Property Name="Telefon" Type="int" />
+          <Property Name="Tc" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'KargoUygulamasi.dbo.BGonderici' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="BGonderici">
+          <Property Name="BireyselID" Type="int" />
+          <Property Name="Ad" Type="varchar" MaxLength="1" />
+          <Property Name="Soyad" Type="varchar" MaxLength="1" />
+          <Property Name="Tc" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'KargoUygulamasi.dbo.Gondericiler' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Gondericiler">
+          <Property Name="GondericiID" Type="int" />
+          <Property Name="IndirimOrani" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Sehir" Type="varchar" MaxLength="1" />
+          <Property Name="Ilce" Type="varchar" MaxLength="1" />
+          <Property Name="Mahalle" Type="varchar" MaxLength="1" />
+          <Property Name="Adres" Type="varchar" MaxLength="1" />
+          <Property Name="Telefon" Type="int" />
+          <Property Name="Mail" Type="varchar" MaxLength="1" />
+          <Property Name="AnlasmaKodu" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Kargo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TakipNo" Type="int" />
+    <Property Name="GonderiNo" Type="int" />
+    <Property Name="Fiyat" Type="money" />
+    <Property Name="GondericiID" Type="int" />
+    <Property Name="AliciId" Type="int" />
+    <Property Name="OdemeTuru" Type="varchar" MaxLength="1" />
+    <Property Name="PersonelID" Type="int" />
+    <Property Name="SigortaDurumu" Type="varchar" MaxLength="1" />
+    <Property Name="Sinifi" Type="varchar" MaxLength="1" />
+    <Property Name="Icerik" Type="varchar" MaxLength="1" />
+    <Property Name="GonderimSekli" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'KargoUygulamasi.dbo.KGonderici' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="KGonderici">
+          <Property Name="KurumsalID" Type="int" />
+          <Property Name="KurumAd" Type="varchar" MaxLength="1" />
+          <Property Name="MersisNo" Type="int" />
+        </EntityType>-->
+  <EntityType Name="mahalle">
+    <Key>
+      <PropertyRef Name="mahalle_id" />
+    </Key>
+    <Property Name="mahalle_id" Type="int" Nullable="false" />
+    <Property Name="mahalle_title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mahalle_key" Type="int" Nullable="false" />
+    <Property Name="mahalle_ilcekey" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'KargoUygulamasi.dbo.Personel' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Personel">
+          <Property Name="Ad" Type="varchar" MaxLength="1" />
+          <Property Name="Soyad" Type="varchar" MaxLength="1" />
+          <Property Name="Tc" Type="int" />
+          <Property Name="Mail" Type="varchar" MaxLength="1" />
+          <Property Name="Sehir" Type="varchar" MaxLength="1" />
+          <Property Name="Ilce" Type="varchar" MaxLength="1" />
+          <Property Name="Mahalle" Type="varchar" MaxLength="1" />
+          <Property Name="Adres" Type="varchar" MaxLength="1" />
+          <Property Name="Telefon" Type="int" />
+          <Property Name="Unvan" Type="varchar" MaxLength="1" />
+          <Property Name="SubeID" Type="int" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="1" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'KargoUygulamasi.dbo.sehir' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="sehir">
+    <Key>
+      <PropertyRef Name="sehir_id" />
+      <PropertyRef Name="sehir_title" />
+      <PropertyRef Name="sehir_key" />
+    </Key>
+    <Property Name="sehir_id" Type="int" Nullable="false" />
+    <Property Name="sehir_title" Type="varchar" MaxLength="55" Nullable="false" />
+    <Property Name="sehir_key" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'KargoUygulamasi.dbo.Sube' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Sube">
+          <Property Name="SubeID" Type="int" />
+          <Property Name="Ad" Type="varchar" MaxLength="1" />
+          <Property Name="Sehir" Type="varchar" MaxLength="1" />
+          <Property Name="Ilce" Type="varchar" MaxLength="1" />
+          <Property Name="Mahalle" Type="varchar" MaxLength="1" />
+          <Property Name="Adres" Type="varchar" MaxLength="1" />
+          <Property Name="Mail" Type="varchar" MaxLength="1" />
+          <Property Name="Telefon" Type="int" />
+        </EntityType>-->
+  <Function Name="RasgeleSayiOlustur" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sayi" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="KargoUygulamasiModelStoreContainer">
+    <EntitySet Name="Kargo" EntityType="Self.Kargo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mahalle" EntityType="Self.mahalle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sehir" EntityType="Self.sehir" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sehir].[sehir_id] AS [sehir_id], 
+    [sehir].[sehir_title] AS [sehir_title], 
+    [sehir].[sehir_key] AS [sehir_key]
+    FROM [dbo].[sehir] AS [sehir]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

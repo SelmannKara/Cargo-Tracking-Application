@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KargoUygulamasiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Kargo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TakipNo" Type="Int32" />
+    <Property Name="GonderiNo" Type="Int32" />
+    <Property Name="Fiyat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="GondericiID" Type="Int32" />
+    <Property Name="AliciId" Type="Int32" />
+    <Property Name="OdemeTuru" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelID" Type="Int32" />
+    <Property Name="SigortaDurumu" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Sinifi" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Icerik" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="GonderimSekli" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mahalle">
+    <Key>
+      <PropertyRef Name="mahalle_id" />
+    </Key>
+    <Property Name="mahalle_id" Type="Int32" Nullable="false" />
+    <Property Name="mahalle_title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mahalle_key" Type="Int32" Nullable="false" />
+    <Property Name="mahalle_ilcekey" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sehir">
+    <Key>
+      <PropertyRef Name="sehir_id" />
+      <PropertyRef Name="sehir_title" />
+      <PropertyRef Name="sehir_key" />
+    </Key>
+    <Property Name="sehir_id" Type="Int32" Nullable="false" />
+    <Property Name="sehir_title" Type="String" MaxLength="55" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sehir_key" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="KargoUygulamasiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Kargo" EntityType="Self.Kargo" />
+    <EntitySet Name="mahalle" EntityType="Self.mahalle" />
+    <EntitySet Name="sehir" EntityType="Self.sehir" />
+    <FunctionImport Name="RasgeleSayiOlustur">
+      <Parameter Name="sayi" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>
